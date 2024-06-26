@@ -591,6 +591,14 @@ footer li {
     font-size: 60%;
   }
 
+  .navbar .container {
+    justify-content: center;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
   .simply-countdown > .simply-section {
     padding: 45px;
     margin: 3px;
