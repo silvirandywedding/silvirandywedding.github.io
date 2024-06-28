@@ -1,6 +1,13 @@
 :root {
-  --brown: #c78665;
+  /* --brown: #c78665; */
+  /* --brown: #560E4B; */
+  --brown: #821972;
   --bg: #0a0a0a;
+}
+
+@font-face {
+  font-family: Meylina;
+  src: url(../font/meylina/Meylina_DEMO.ttf);
 }
 
 .text-brown {
@@ -10,6 +17,7 @@
 body {
   font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
+  background-color: #e1fae9;
 }
 
 .hero::before {
@@ -24,7 +32,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
-  filter: invert(15%);
+  filter: invert(21%);
 }
 
 .hero {
@@ -35,7 +43,7 @@ body {
 }
 
 .hero h1 {
-  font-family: "Sacramento", cursive;
+  font-family: "Meylina", cursive;
   font-size: 6rem;
 }
 
@@ -44,16 +52,16 @@ body {
 }
 
 .hero p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .hero a {
   color: var(--brown);
-  background-color: white;
+  background-color: #e1fae9;
 }
 
 .hero a:hover {
-  color: white;
+  color: #e1fae9;
   background-color: var(--brown);
 }
 
@@ -101,9 +109,8 @@ body {
 .rsvp h2,
 .gifts h2 {
   color: var(--brown);
-  font-family: "Sacramento", cursive;
-  font-size: 5rem;
-  font-weight: bold;
+  font-family: "Meylina", cursive;
+  font-size: 4rem;
 }
 
 .home h3 {
@@ -113,23 +120,37 @@ body {
 }
 
 .home p {
-  font-size: 1rem;
-  color: #666;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.home .ar-rum p {
+  color: #821972;
+}
+
+.home .ar-rum .arabic {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .home .couple h3 {
-  font-family: "Sacramento", cursive;
-  font-size: 2.4rem;
+  font-family: "Meylina", cursive;
+  font-size: 2.8rem;
   color: var(--brown);
 }
 
 .home .couple a {
   text-decoration: none;
-  color: #666;
+  color: #821972;
+  font-size: 1rem;
 }
 
 .home .couple a:hover {
   color: var(--brown);
+}
+
+.home .couple .meylina {
+  font-family: "meylina", cursive;
 }
 
 .parallax-info {
@@ -152,28 +173,33 @@ body {
   color: white;
   text-transform: uppercase;
   letter-spacing: 8px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .info {
   background-color: var(--brown);
   padding-top: 10rem;
   padding-bottom: 8rem;
+  color: #e1fae9;
 }
 
 .info h2 {
-  font-family: "Sacramento", cursive;
-  font-size: 5rem;
-  font-weight: bold;
-  color: #000;
+  /* font-family: "Meylina", cursive; */
+  /* font-size: 5rem; */
+  /* font-weight: bold; */
+  color: #e1fae9;
 }
 
 .info .alamat {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+}
+
+.info a {
+  font-size: 1.2rem;
 }
 
 .info .description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
@@ -190,7 +216,7 @@ body {
 
 .info .card-footer {
   border-top: 1px solid #999;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
@@ -229,7 +255,7 @@ body {
 .gallery span,
 .gifts span {
   text-transform: uppercase;
-  color: #666;
+  color: #000;
   font-size: 0.9rem;
   letter-spacing: 1px;
   display: block;
@@ -240,7 +266,7 @@ body {
 .gallery p,
 .rsvp p,
 .gifts p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
@@ -342,7 +368,11 @@ body {
 }
 
 .gallery {
-  background-color: #f5f5f5;
+  background-color: #e1fae9;
+}
+
+.gallery span {
+  font-size: 1rem;
 }
 
 .gallery .owl-carousel {
@@ -445,7 +475,11 @@ body {
 }
 
 .gifts {
-  background-color: #f5f5f5;
+  background-color: #e1fae9;
+}
+
+.gifts span {
+  font-size: 1rem;
 }
 
 footer {
@@ -588,7 +622,11 @@ footer li {
 /* handphone */
 @media (max-width: 576px) {
   html {
-    font-size: 60%;
+    font-size: 80%;
+  }
+
+  .hero main {
+    max-width: 360px;
   }
 
   .navbar .container {
@@ -600,7 +638,7 @@ footer li {
   }
 
   .simply-countdown > .simply-section {
-    padding: 45px;
+    padding: 40px;
     margin: 3px;
   }
 
