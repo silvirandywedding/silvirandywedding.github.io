@@ -1,8 +1,8 @@
 :root {
-  /* --brown: #c78665; */
-  /* --brown: #560E4B; */
-  --brown: #821972;
-  --bg: #0a0a0a;
+  --primary: #e1fae9;
+/*  --secondary: #821972;*/
+/*  --secondary: #173621;*/
+  --secondary: #1E562F;
 }
 
 @font-face {
@@ -10,14 +10,18 @@
   src: url(../font/meylina/Meylina_DEMO.ttf);
 }
 
-.text-brown {
-  color: var(--brown);
+.text-secondary {
+  color: var(--secondary);
+}
+
+html,body {
+  overflow-x: hidden;
 }
 
 body {
   font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
-  background-color: #e1fae9;
+  background-color: var(--primary);
 }
 
 .hero::before {
@@ -26,8 +30,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: url(../img/bg-hero.jpg);
+  min-height: 100vh;
+  background-image: url(../img/bg-hero.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,57 +52,29 @@ body {
 }
 
 .hero h4 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .hero a {
-  color: var(--brown);
-  background-color: #e1fae9;
+  color: var(--secondary);
+  background-color: var(--primary);
 }
 
 .hero a:hover {
-  color: #e1fae9;
-  background-color: var(--brown);
+  color: var(--primary);
+  background-color: var(--secondary);
 }
 
 .hero-out {
   z-index: -999999;
 }
 
-.my-navbar {
-  background-color: rgba(255, 255, 255, 0.3) !important;
-  backdrop-filter: blur(4px);
-}
-
-.my-navbar .navbar-brand {
-  color: var(--brown);
-}
-
-.my-navbar .offcanvas {
-  height: 100vh;
-}
-
-.my-navbar .navbar-brand,
-.my-navbar .offcanvas-title {
-  font-family: "Sacramento", cursive;
-  font-size: 3.2rem;
-  font-weight: bold;
-}
-
-.my-navbar .nav-link {
-  text-transform: uppercase;
-}
-
-.my-navbar .nav-link:hover {
-  color: var(--brown);
-}
-
 .home {
-  padding-top: 12rem;
+  padding-top: 4rem;
   padding-bottom: 10rem;
 }
 
@@ -108,15 +84,16 @@ body {
 .gallery h2,
 .rsvp h2,
 .gifts h2 {
-  color: var(--brown);
+  color: var(--secondary);
   font-family: "Meylina", cursive;
   font-size: 4rem;
 }
 
 .home h3 {
-  color: #444;
-  font-size: 1.5rem;
+  color: var(--secondary);
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-family: "Meylina", cursive;
 }
 
 .home p {
@@ -125,7 +102,7 @@ body {
 }
 
 .home .ar-rum p {
-  color: #821972;
+  color: var(--secondary);
 }
 
 .home .ar-rum .arabic {
@@ -136,21 +113,34 @@ body {
 .home .couple h3 {
   font-family: "Meylina", cursive;
   font-size: 2.8rem;
-  color: var(--brown);
+  color: var(--secondary);
 }
 
 .home .couple a {
   text-decoration: none;
-  color: #821972;
+  color: var(--secondary);
   font-size: 1rem;
 }
 
 .home .couple a:hover {
-  color: var(--brown);
+  color: var(--secondary);
 }
 
 .home .couple .meylina {
   font-family: "meylina", cursive;
+}
+
+.home .couple img {
+  border: solid var(--secondary) 4px;
+  box-shadow: 0px 5px 30px -10px;
+}
+
+.home img.img-fluid {
+  max-width: 80%;
+}
+
+.home img.bottom {
+  transform: rotate(180deg);
 }
 
 .parallax-info {
@@ -177,7 +167,7 @@ body {
 }
 
 .info {
-  background-color: var(--brown);
+  background-color: var(--secondary);
   padding-top: 10rem;
   padding-bottom: 8rem;
   color: #e1fae9;
@@ -270,105 +260,8 @@ body {
   font-weight: 300;
 }
 
-.timeline {
-  list-style: none;
-  padding: 1.4rem 0;
-  margin-top: 1rem;
-  position: relative;
-}
-
-.timeline::before {
-  content: "";
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  width: 1px;
-  background-color: #ccc;
-  left: 50%;
-}
-
-.timeline li {
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.timeline li::before,
-.timeline li::after {
-  content: "";
-  display: table;
-}
-
-.timeline li::after {
-  clear: both;
-}
-
-.timeline li .timeline-image {
-  width: 160px;
-  height: 160px;
-  background-color: #ccc;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.timeline li .timeline-panel {
-  width: 40%;
-  float: left;
-  border: 1px solid #ccc;
-  padding: 2rem;
-  position: relative;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
-.timeline li .timeline-panel::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  border-top: 15px solid transparent;
-  border-left: 15px solid #ccc;
-  border-right: 0 solid #ccc;
-  border-bottom: 15px solid transparent;
-  top: 80px;
-  right: -15px;
-}
-
-.timeline li .timeline-panel::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 14px solid transparent;
-  top: 81px;
-  right: -13px;
-}
-
-.timeline li.timeline-inverted .timeline-panel {
-  float: right;
-}
-
-.timeline li.timeline-inverted .timeline-panel::before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
-
-.timeline li.timeline-inverted .timeline-panel::after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -13px;
-  right: auto;
-}
-
 .gallery {
-  background-color: #e1fae9;
+  background-color: var(--primary);
 }
 
 .gallery span {
@@ -380,15 +273,15 @@ body {
 }
 
 .gallery .owl-dots .active span {
-  background-color: var(--brown) !important;
+  background-color: var(--secondary) !important;
 }
 
 .gallery .owl-dots .owl-dot:hover span {
-  background-color: var(--brown) !important;
+  background-color: var(--secondary) !important;
 }
 
 .gallery .owl-dots .owl-dot span:hover {
-  background-color: var(--brown) !important;
+  background-color: var(--secondary) !important;
 }
 
 .gallery .owl-carousel .owl-nav .owl-prev {
@@ -402,7 +295,7 @@ body {
 }
 
 .gallery .owl-carousel .owl-nav span {
-  color: var(--brown);
+  color: var(--secondary);
   font-size: 4rem;
   margin: 0;
 }
@@ -418,7 +311,7 @@ body {
 }
 
 .rsvp button {
-  background-color: var(--brown);
+  background-color: var(--secondary);
   color: white;
 }
 
@@ -449,7 +342,7 @@ body {
 .rsvp .wish-list li {
   padding: 16px 12px;
   margin: 20px 0;
-  background-color: var(--brown);
+  background-color: var(--secondary);
   max-width: 750px;
   border-radius: 8px;
   color: white;
@@ -467,7 +360,7 @@ body {
 }
 
 .rsvp .card-wish {
-  background-color: var(--brown);
+  background-color: var(--secondary);
   margin: 1rem 1rem;
   padding: 1rem;
   color: white;
@@ -483,25 +376,9 @@ body {
 }
 
 footer {
-  padding: 3rem;
-  background-color: var(--brown);
+  padding: 2.4rem;
+  background-color: var(--secondary);
   color: white;
-}
-
-footer a {
-  color: var(--bg);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: white;
-}
-
-footer li {
-  list-style: none;
-  display: inline;
-  margin: 0.5rem;
 }
 
 .audio-icon-wrapper {

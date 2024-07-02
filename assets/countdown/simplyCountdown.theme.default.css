@@ -1,3 +1,8 @@
+:root{
+  --primary: #e1fae9;
+  --secondary: ##1E562F;
+}
+
 .simply-countdown {
   overflow: hidden;
   display: table;
@@ -15,10 +20,10 @@
   justify-content: center;
   float: left;
   margin: 10px;
-  background: #e1fae9;
+  background: var(--primary);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 50%;
-  color: #821972;
+  color: var(--secondary);
 }
 
 .simply-countdown > .simply-section .simply-amount,
@@ -28,5 +33,5 @@
 }
 
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
