@@ -1,6 +1,6 @@
-:root{
+:root {
   --primary: #e1fae9;
-  --secondary: ##1E562F;
+  --secondary: ##1e562f;
 }
 
 .simply-countdown {
@@ -33,5 +33,11 @@
 }
 
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 576px) {
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 1.2rem;
+  }
 }

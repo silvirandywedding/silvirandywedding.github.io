@@ -20,7 +20,6 @@ function disableScroll() {
 function enableScroll() {
   window.onscroll = function () {};
   rootElement.style.scrollBehavior = "smooth";
-  // localStorage.setItem("opened", "true");
 
   playAudio();
 }
@@ -46,12 +45,6 @@ audioIconWrapper.addEventListener("click", () => {
   isPlaying = !isPlaying;
 });
 
-// if (!localStorage.getItem("opened")) {
-//   disableScroll();
-// } else {
-//   cover.classList.add("d-none");
-// }
-
 disableScroll();
 
 btnOpen.addEventListener("click", () => {
@@ -62,22 +55,8 @@ btnOpen.addEventListener("click", () => {
   }, 1000);
 });
 
-// const stickyTop = document.querySelector(".sticky-top");
-// const offcanvas = document.querySelector(".offcanvas");
-
-// offcanvas.addEventListener("show.bs.offcanvas", function () {
-//   stickyTop.style.overflow = "visible";
-// });
-
-// offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-//   stickyTop.style.overflow = "hidden";
-// });
-
 const urlParams = new URLSearchParams(window.location.search);
-const nama = urlParams.get("n") || "";
-const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i, ";
-const namaRsvp = document.querySelectorAll(".rsvp #nama");
+const to = urlParams.get("to") || "";
 
-const namaContainer = document.querySelector(".hero h4 span");
-namaContainer.innerText = `${pronoun} ${nama}`;
-namaRsvp.forEach((n) => (n.value = nama));
+const namaContainer = document.querySelector(".hero h3");
+namaContainer.innerText = to;

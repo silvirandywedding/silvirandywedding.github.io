@@ -1,8 +1,8 @@
 :root {
   --primary: #e1fae9;
-/*  --secondary: #821972;*/
-/*  --secondary: #173621;*/
-  --secondary: #1E562F;
+  /*  --secondary: #821972;*/
+  /*  --secondary: #173621;*/
+  --secondary: #1e562f;
 }
 
 @font-face {
@@ -14,7 +14,8 @@
   color: var(--secondary);
 }
 
-html,body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -555,5 +556,9 @@ footer {
 
   .timeline li .timeline-panel::after {
     top: 31px;
+  }
+
+  .ratio-16x9 {
+    --bs-aspect-ratio: 145%;
   }
 }
